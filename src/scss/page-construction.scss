@@ -1,0 +1,88 @@
+.page-construction {
+    position: relative;
+    display: flex;
+    margin-top: 0;
+    z-index: 1;
+    background-image: url(@img/hero/hero_main.webp);
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    //page-construction__container
+    &__container {
+        position: relative;
+    }
+
+    //page-construction__main
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    //page-construction__title
+    &__title {
+        color: $bgBody;
+        font-weight: 600;
+        @include adaptiveValue(font-size, $pcSizeTitle, 24);
+        @include adaptiveValue(margin-bottom, 28, 16);
+        text-transform: uppercase;
+        @include adaptiveValue(letter-spacing, 8, 5);
+        text-align: center;
+        z-index: 2;
+        opacity: 0.7;
+    }
+
+    //page-construction__btn
+    &__btn {
+        border-radius: 1px;
+        padding: rem(14) rem(26) rem(12);
+        text-transform: uppercase;
+        @include adaptiveValue(font-size, 26, 22);
+        @include adaptiveValue(letter-spacing, 3, 2);
+        @include animationButtonBorder($bgBody);
+        z-index: 2;
+    }
+
+    //page-construction__contacts
+    &__contacts {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 6vh;
+        opacity: 0.7;
+        z-index: 2;
+    }
+
+    //page-construction__social-link
+    &__social-link {
+        &:not(:last-child) {
+            @include adaptiveValue(margin-right, 16, 12);
+        }
+    }
+
+    //page-construction__social-item
+    &__social-item {
+        fill: $bgBody;
+        opacity: 0.7;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}

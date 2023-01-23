@@ -1,0 +1,75 @@
+/* =========================about=================================== */
+.about {
+    position: relative;
+    background-image: $bgBlock;
+    background-size: cover;
+    background-position: center;
+    padding-top: 90px;
+    z-index: 20;
+
+    &__banner {
+        position: absolute;
+        top: 0;
+        height: 90px;
+        width: 100%;
+        background-color: $bgBody;
+    }
+
+    &__bg {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: 'Alumni Sans', sans-serif;
+        @include adaptiveValue(padding-left, 125, 0, $widthFrom: $containerWidth, $widthTo: 767.98);
+        @include adaptiveValue(padding-right, 125, 0, $widthFrom: $containerWidth, $widthTo: 767.98);
+        z-index: 20;
+
+        @media (max-width: $mobile) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding: 0;
+        }
+    }
+
+    &__blok-text {
+        flex: 0 1 40%;
+        color: $mainColor;
+        // margin-right: rem(30);
+        @include adaptiveValue(margin-right, 30, 22, $widthFrom: $containerWidth, $widthTo: 767.98);
+        @include adaptiveValue(margin-bottom, 36, 32, $widthFrom: 767.98, $widthTo: $minWidth);
+        font-weight: 400;
+        text-align: justify;
+
+        @media (max-width: $mobile) {
+            flex: 1 1 100%;
+        }
+
+        .blok-text {
+            &__title {
+                @include adaptiveValue(font-size, $pcSizeTitle, $mobSizeTitle);
+                text-transform: uppercase;
+                @include adaptiveValue(margin-bottom, 40, 28);
+                letter-spacing: rem(1);
+                line-height: 1;
+            }
+
+            &__text {
+                @include adaptiveValue(font-size, 18, 14);
+                line-height: 140%;
+                letter-spacing: rem(0.8);
+
+                &:not(:last-child) {
+                    @include adaptiveValue(margin-bottom, 26, 18);
+                }
+            }
+        }
+    }
+
+    &__img-ibg {
+        overflow: hidden;
+        min-width: rem(400);
+        @include adaptiveValue(min-height, 600, 400);
+        @include adaptiveValue(margin-top, 80, 30);
+        @include adaptiveValue(margin-bottom, 80, 30);
+    }
+}

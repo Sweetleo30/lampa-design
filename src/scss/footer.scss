@@ -1,0 +1,223 @@
+/* =========================Footer=================================== */
+
+.footer {
+    background-image: $bgFooter;
+    background-size: cover;
+    background-position: center;
+    text-transform: uppercase;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue(margin-top, 40, 0);
+        margin-bottom: rem(40);
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    &__column {
+
+        &_big {
+            flex: 0 1 35%;
+            margin-left: 0;
+        }
+    }
+
+    &__logo {
+        margin: rem(5) 0;
+        width: rem(98);
+        height: rem(115);
+
+        @media (max-width: $tablet) {
+            width: rem(85);
+            height: rem(100);
+        }
+
+        @media (max-width: $mobile) {
+            width: rem(76);
+            height: rem(90);
+        }
+
+        &:hover {
+            // https://codepen.io/sosuke/pen/Pjoqqp
+            filter: invert(86%) sepia(29%) saturate(486%) hue-rotate(336deg) brightness(96%) contrast(87%);
+            transition: all 0.3s ease-out;
+        }
+    }
+
+    &__label {
+        letter-spacing: 4.6px;
+        margin-bottom: rem(18);
+        font-weight: 700;
+        text-transform: uppercase;
+        @include adaptiveValue(font-size, 24, 22);
+
+        @media (max-width: 768px) {
+            margin: 18px 0 0 0;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: 768px) {
+            margin-top: rem(16);
+        }
+    }
+
+    &__social {
+        margin-top: 10px;
+    }
+
+    &__social-item {
+        fill: $mainColor;
+        margin-right: rem(10);
+
+        &:hover {
+            fill: $brown;
+        }
+
+        &:active {
+            fill: lighten($brown, 10%);
+        }
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        text-transform: none;
+        font-weight: 300;
+        letter-spacing: rem(0.5);
+        @include adaptiveValue(font-size, 18, 14);
+        @include adaptiveValue(margin-bottom, 20, 15);
+
+
+        & a {
+            opacity: 0.4;
+
+            &:hover {
+                opacity: 0.9;
+                transition: all 0.3s ease-out;
+            }
+        }
+    }
+}
+
+.menu-footer {
+
+    @media (max-width: 768px) {
+        margin-top: rem(16);
+    }
+
+    &__item {
+        letter-spacing: rem(1);
+        line-height: 120%;
+        @include adaptiveValue(font-size, 20, 18);
+
+        @media (max-width: 768px) {
+            line-height: 180%;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        color: $mainColor;
+
+        &:hover {
+            color: $brown;
+            transition: all 0.3s ease-out;
+        }
+
+        &:active {
+            color: lighten($brown, 10%);
+        }
+    }
+}
+
+.contact-social {
+    letter-spacing: 2px;
+    line-height: 130%;
+    @include adaptiveValue(font-size, 20, 16);
+
+    @media (max-width: 768px) {
+        line-height: 160%;
+    }
+
+    &:hover {
+        color: $brown;
+        transition: all 0.3s ease-out;
+    }
+
+    &:active {
+        color: lighten($brown, 10%);
+    }
+}
+
+.footer-alternative {
+    display: none;
+}
+
+.social {
+
+    & a {
+        @include adaptiveValue(width, 32, 30);
+        @include adaptiveValue(height, 32, 30);
+    }
+
+    &__item {
+        display: inline-block;
+        @include adaptiveValue(width, 28, 25);
+        @include adaptiveValue(height, 28, 25);
+
+        &:hover {
+            transition: all 0.3s ease-out;
+        }
+    }
+}
+
+.scroll-top-btn {
+    display: block;
+    padding: rem(10);
+    position: fixed;
+    bottom: rem(50);
+    width: rem(40);
+    right: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    z-index: 10;
+    transition: opacity .3s ease;
+
+    @media (max-width: $tablet) {
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        @include adaptiveValue(bottom, 52, 46);
+    }
+
+    @media (max-width: 768px) {
+        @include adaptiveValue(bottom, 52, 46);
+    }
+}
+
+.go-up-svg {
+    transform: rotate(-90deg);
+    fill: $brown;
+
+    &:hover {
+        fill: lighten($bgBody, 10%);
+        transition: all 0.3s ease-out;
+    }
+
+    &:active {
+        fill: lighten($brown, 10%);
+    }
+}

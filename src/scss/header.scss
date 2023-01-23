@@ -1,0 +1,245 @@
+/* ============================Header========================================= */
+
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: rem(100);
+	z-index: 50;
+	margin-top: rem(25);
+
+	@media (max-width: $tablet) {
+		display: flex;
+		position: fixed;
+		top: 0;
+		margin-top: 0;
+		padding: rem(10) rem(0) rem(11);
+	}
+
+	&:before {
+		@media (max-width: $tablet) {
+			content: 'lampa design';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $bgBody;
+			padding: rem(10) rem(0) rem(11);
+			color: $brown;
+			text-align: center;
+			text-transform: uppercase;
+			letter-spacing: rem(5);
+			@include adaptiveValue(font-size, 22, 20);
+			z-index: 3;
+		}
+	}
+
+	&._header-scroll {
+		position: fixed;
+		top: 0;
+		margin-top: 0;
+		background-color: $bgBody;
+		box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.1);
+		transition: background-color 0.3s ease-in-out;
+
+		@media (max-width: $tablet) {
+			top: -200%;
+		}
+
+		.header__logo-link {
+			display: flex;
+			text-transform: uppercase;
+			letter-spacing: rem(5);
+			@include adaptiveValue(font-size, 22, 20);
+
+			@media (max-width: $tablet) {
+				display: none;
+			}
+		}
+
+		& a {
+			font-weight: 600;
+			line-height: 1.29;
+			color: $brown;
+
+			&:hover {
+				color: $light-brown;
+				transition: all 0.3s ease-out;
+			}
+		}
+	}
+
+	&._header-show {
+		transition: top 1.2s ease 0s;
+		top: 0;
+	}
+
+
+
+	// header__container
+	&__container {
+		position: relative;
+
+
+		@media (max-width: $tablet) {
+			// position: relative;
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+		}
+	}
+
+	// header__body
+	&__body {
+		display: flex;
+		position: relative;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// header__logo-link
+	&__logo-link {
+		display: none;
+	}
+
+	// header__menu
+	&__menu {
+		flex: 1 1 auto;
+		letter-spacing: 3px;
+	}
+}
+
+.header-alternative {
+	display: none;
+}
+
+//Burger
+.icon-menu {
+	display: none;
+
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(28);
+		height: rem(16);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: $brown;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+// header__menu .menu
+.menu {
+	display: flex;
+	justify-content: flex-end;
+	text-transform: uppercase;
+	padding: 14px 0;
+
+	@media (max-width: $tablet) {
+		justify-content: center;
+		align-items: flex-start;
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: all 0.6s ease 0s;
+		background-color: $bgBody;
+		padding: rem(55) rem(15) rem(0);
+		z-index: 2;
+	}
+
+	// menu__list
+	&__list {
+		display: flex;
+		position: relative;
+		z-index: 4;
+
+		@media (max-width: $tablet) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	// menu__item 
+	&__item {
+		position: relative;
+		list-style: none;
+
+		&:not(:first-child) {
+			@include adaptiveValue(margin-left, 97, 50);
+
+			@media (max-width: $tablet) {
+				margin: 0;
+			}
+		}
+
+		@media (max-width: $tablet) {
+			margin: 0;
+			padding: 15px 0;
+		}
+	}
+
+	// menu__link
+	&__link {
+		font-weight: 500;
+		line-height: 1.29;
+		color: $bgBody;
+
+		&:hover {
+			color: $brown;
+			transition: 0.3s;
+		}
+
+		@media (max-width: $tablet) {
+			color: $brown;
+		}
+	}
+}
+
+.menu-open .menu {
+	top: 0;
+}

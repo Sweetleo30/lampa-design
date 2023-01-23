@@ -1,0 +1,120 @@
+/* =========================portfolio=================================== */
+.portfolio {
+
+    @include adaptiveValue(margin-bottom, 90, 44);
+
+    @media (max-width: $tablet) {
+        @include adaptiveValue(margin-bottom, 70, 60);
+    }
+
+    // portfolio__container
+    &__container {
+        color: $brown;
+        @include adaptiveValue(padding-top, 90, 44);
+    }
+
+    // portfolio__title
+    &__title {
+        font-family: $fontFamilySecondary;
+        text-transform: uppercase;
+        padding: rem(0) rem(15);
+        text-align: center;
+        @include adaptiveValue(font-size, $pcSizeTitle, $mobSizeTitle);
+        @include adaptiveValue(margin-bottom, 80, 30)
+    }
+
+    // portfolio__content
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        @include adaptiveValue(gap, 20, 14, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0);
+    }
+
+    //portfolio__block .block-portfolio
+    .block-portfolio {
+        flex: 1 1 30%;
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue(margin-bottom, 50, 20);
+
+        // block-portfolio__img-ibg
+        &__img-ibg {
+            overflow: hidden;
+            @include adaptiveValue(min-height, 460, 280);
+            @include adaptiveValue(min-width, 300, 280);
+
+            & img {
+                transition: 1.7s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        // block-portfolio__text 
+        &__text {
+            display: flex;
+            align-items: flex-end;
+            margin-top: rem(20);
+            @include adaptiveValue(margin-top, 20, 16);
+        }
+
+        // block-portfolio__title
+        &__title {
+            font-family: $fontFamilySecondary;
+            letter-spacing: rem(2.5);
+            text-transform: uppercase;
+            @include adaptiveValue(font-size, 24, 20);
+            @include animationLink($brown, $silver-gray);
+
+            &:after {
+                content: '';
+                margin-left: rem(8);
+                border: 1px solid $brown;
+                color: $brown;
+            }
+        }
+
+        // block-portfolio__subtitle
+        &__subtitle {
+            padding-left: rem(8);
+            letter-spacing: rem(0.9);
+            text-transform: uppercase;
+            @include adaptiveValue(font-size, 20, 16);
+            @include animationLink($brown, $quartz);
+        }
+    }
+
+    // portfolio__bottom
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveValue(margin-top, 40, 20);
+    }
+
+    // portfolio__bottom-text
+    &__bottom-text {
+        max-width: rem(550);
+        letter-spacing: rem(1.5);
+        color: $dark-gray;
+        text-transform: uppercase;
+        text-align: center;
+        @include adaptiveValue(font-size, 24, 20);
+        @include adaptiveValue(margin-bottom, 40, 20);
+    }
+
+    // portfolio__button
+    &__button {
+        border-radius: 1px;
+        letter-spacing: rem(3);
+        padding: rem(14) rem(26) rem(12);
+        text-transform: uppercase;
+        @include adaptiveValue(font-size, 28, 22);
+        @include animationButton($green-gray, $bgBody);
+    }
+}
