@@ -172,7 +172,7 @@
 	// hero__scroll-btn 
 	&__scroll-btn {
 		position: absolute;
-		bottom: rem(20);
+		bottom: rem(22);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: inline-block;
@@ -206,13 +206,11 @@
 
 .arrow-icon {
 	display: block;
-	width: 10px;
-	height: 15px;
-	margin: 0 auto;
 	cursor: pointer;
 }
 
 .go-down-svg {
+	margin: rem(7.5) rem(10);
 	transform: rotate(90deg);
 	fill: $bgBody;
 

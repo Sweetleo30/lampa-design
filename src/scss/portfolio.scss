@@ -73,7 +73,7 @@
             &:after {
                 content: '';
                 margin-left: rem(8);
-                border: 1px solid $brown;
+                border: rem(1) solid $brown;
                 color: $brown;
             }
         }

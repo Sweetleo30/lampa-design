@@ -74,12 +74,12 @@
     }
 
     &__social {
+        gap: rem(10);
         margin-top: 10px;
     }
 
     &__social-item {
         fill: $mainColor;
-        margin-right: rem(10);
 
         &:hover {
             fill: $brown;
@@ -166,17 +166,30 @@
     display: none;
 }
 
-.social {
+.social-icons {
+    display: grid;
 
-    & a {
-        @include adaptiveValue(width, 32, 30);
-        @include adaptiveValue(height, 32, 30);
+    grid-template-columns: repeat(auto-fit, rem(30));
+    // list-style: none;
+    padding: 0;
+
+    &__link {
+
+        // background-position: 50%;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // display: block;
+        // font-size: 0;
+        // height: 30px;
+        // line-height: 0;
+        // position: relative;
+        // width: 30px;
     }
 
     &__item {
         display: inline-block;
-        @include adaptiveValue(width, 28, 25);
-        @include adaptiveValue(height, 28, 25);
+        // @include adaptiveValue(width, 28, 25);
+        // @include adaptiveValue(height, 28, 25);
 
         &:hover {
             transition: all 0.3s ease-out;
@@ -209,6 +222,7 @@
 }
 
 .go-up-svg {
+    margin: 0 auto;
     transform: rotate(-90deg);
     fill: $brown;
 

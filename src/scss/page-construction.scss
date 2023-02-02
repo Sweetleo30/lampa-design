@@ -61,15 +61,15 @@
         left: 50%;
         transform: translate(-50%, -50%);
         bottom: 6vh;
+        max-height: rem(30);
+        width: rem(124);
         opacity: 0.7;
-        z-index: 2;
+        // z-index: 2;
     }
 
-    //page-construction__social-link
-    &__social-link {
-        &:not(:last-child) {
-            @include adaptiveValue(margin-right, 16, 12);
-        }
+    &__social {
+        gap: rem(16);
+        width: 100%;
     }
 
     //page-construction__social-item
