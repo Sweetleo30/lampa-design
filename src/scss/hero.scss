@@ -230,6 +230,7 @@
 	background-size: cover;
 }
 
+//Первый главный слайд
 .slide-first {
 	position: relative;
 	background-image: url(@img/hero/hero_main.webp);
@@ -247,10 +248,12 @@
 	}
 
 	@media (max-width: $mobile) {
+		background-image: url(@img/hero/hero_main_mobile.webp);
 		background-position: center;
 	}
 }
 
+//Второй слайд
 .slide-second {
 	position: relative;
 	background-image: url(@img/hero/1.webp);
@@ -269,9 +272,11 @@
 
 	@media (max-width: $mobile) {
 		background-position-y: 30%;
+		background-image: url(@img/hero/1_mobile.webp);
 	}
 }
 
+//Третий слайд
 .slide-third {
 	position: relative;
 	background-image: url(@img/hero/2.webp);
@@ -290,24 +295,26 @@
 
 	@media (max-width: $mobile) {
 		background-position-y: 65%;
+		background-image: url(@img/hero/2_mobile.webp);
 	}
 }
 
-.slide-fourth {
-	position: relative;
-	background-image: url(@img/hero/3.webp);
-	background-position-x: 20%;
-	background-position-y: 52%;
+//Четвертый слайд
+// .slide-fourth {
+// 	position: relative;
+// 	background-image: url(@img/hero/3.webp);
+// 	background-position-x: 20%;
+// 	background-position-y: 52%;
 
-	&:before {
-		position: absolute;
-		content: "";
-		left: 0;
-		bottom: 0;
-		right: 0;
-		top: 0;
-		background: rgba(29, 23, 23, 0.311);
-	}
+// 	&:before {
+// 		position: absolute;
+// 		content: "";
+// 		left: 0;
+// 		bottom: 0;
+// 		right: 0;
+// 		top: 0;
+// 		background: rgba(29, 23, 23, 0.311);
+// 	}
 
-	@media (max-width: $tablet) {}
-}
+// 	@media (max-width: $mobile) {}
+// }

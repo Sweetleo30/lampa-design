@@ -17,6 +17,10 @@
         background: rgba(0, 0, 0, 0.7);
     }
 
+    @media (max-width: $mobile) {
+        background-image: url(@img/hero/hero_main_mobile.webp);
+    }
+
     //page-construction__container
     &__container {
         position: relative;
