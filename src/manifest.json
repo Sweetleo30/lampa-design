@@ -1,0 +1,57 @@
+{
+    "background_color": "#d6d2cf",
+    "description": "Разрабатываю дизайн, создаю стиль и историю, которая поможет бренду быть уникальным и узнаваемым.",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "LAMPA DESIGN",
+    "orientation": "any",
+    "scope": "/",
+    "short_name": "LAMPA DESIGN",
+    "start_url": "https://design-lampa.ru",
+    "theme_color": "#d6d2cf",
+    "categories": [
+        "design",
+        "graphics",
+        "photo"
+    ],
+    "screenshots": [],
+    "icons": [
+        {
+            "src": "icons/512.png",
+            "type": "image/x-icon",
+            "sizes": "512x512",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "favicon.ico",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "icons/apple-touch-icon.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "favicon.ico",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "icons/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "shortcuts": [],
+    "lang": "ru",
+    "display_override": [
+        "standalone",
+        "minimal-ui"
+    ]
+}
