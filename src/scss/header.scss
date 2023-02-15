@@ -73,6 +73,10 @@
 	&._header-show {
 		transition: top 1.2s ease 0s;
 		top: 0;
+
+		@media (max-width: $tablet) {
+			top: 0;
+		}
 	}
 
 
