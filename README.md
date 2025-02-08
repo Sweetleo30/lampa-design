@@ -2,7 +2,7 @@
 
 <img src="./readme_assets/design-lampa.ru_main.webp" width="100%">
 
-<h2 align="center"><a  href="https://design-lampa.ru">design-lampa.ru</a></h2>
+<h2 align="center"><a  href="https://design-lampaart.ru">design-lampaart.ru</a></h2>
 
 ## Описание
 
